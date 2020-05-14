@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{%  block title %}{{form.title}} | {{block.super}}{% endblock %}
+{% block content %}
+<title>Search Results</title>
+<form action="#" method="POST">
+    {% csrf_token %}
+    <label for="id">Student ID</label>
+    <input id="id" type="text" name="owner_id" required>
+    <button type="submit">Search</button>
+</form>
+{% endblock%}

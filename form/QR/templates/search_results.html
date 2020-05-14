@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Owner Name: {{owner.owner_first_name}} {{owner.owner_last_name}} </h3>
+
+<table class="table table-hover table-bordered table-striped">
+    
+    <tr class="table-primary">
+        
+        <th>Department</>
+        <th>Phone Number</th>
+        <th>Identification Number</th>
+        <th>Laptop Name </th>
+        <th>Laptop Model</th>
+        <th>Serial Number</th>
+        <th>Laptop color</th>
+    </tr>
+    <tbody>
+        <tr>
+        
+        <td>{{ owner.department}}</td>
+        <td>{{ owner.phone_number}}</td>
+        <td>{{ owner.owner_id}}</td>
+        {% for laptop in owner.laptops.all %}
+        <td>{{ laptop.laptop_name }}</td> 
+        <td>{{ laptop.laptop_model }}</td> 
+        <td>{{ laptop.serial_number}}</td> 
+        <td>{{ laptop.laptop_color}}</td>
+    </tr>
+</tbody>
+</table>
+<br>
+
+<div align="center">
+<img src="{{owner.image.url}}" alt=""><br><br>   
+<a href="{% url 'QR:generate' laptop.id %}" class="btn btn-outline-success my-2 my-sm-0" type="submit">Generate QR code</a>
+
+</div>
+{% endfor %}
+</body>
+</html>
+{% endblock %}  

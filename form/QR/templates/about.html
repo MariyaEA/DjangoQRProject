@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="aboutus-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="col-8"></div>
+        <div class="aboutus">
+          <h2 class="aboutus-title">About Us</h2>
+          <p class="aboutus-text" align="justify">
+            This Web application is made to the campus for security purpose.
+            This application will help to reduce the theft of laptop owners in
+            the campus.It is made with simple and ease of use!!
+          </p>
+          <a href="{% url 'QR:aboutt' %}" class="btn btn-outline-success my-2 my-sm-0" type="submit"
+            >Read More</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post" >
+{% csrf_token %}
+{{ form.as_p}}
+<small>
+    <a href="{% url 'QR:register' %}">Register</a>
+    <a href="{% url 'account_reset_password' %}">Forgotten Your Passord?</a>
+</small>
+<br>
+<input type="submit" value="Login" class="btn btn-outline-success">
+</form>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div align="center">
+    <script type="text/javascript">
+        function QrCodePrint(source) {
+            return "<html><head><script>function step1(){\n" +
+                    "setTimeout('step2()', 10);}\n" +
+                    "function step2(){window.print();window.close()}\n" +
+                    "</scri" + "pt></head><body onload='step1()'>\n" +
+                    "<img src='" + source + "' /></body></html>";
+        }
+        function QRPrint(source) {
+            Pagelink = "about:blank";
+            var pwa = window.open(Pagelink, "_new");
+            pwa.document.open();
+            pwa.document.write(QrCodePrint(source));
+            pwa.document.close();
+        }
+    </script>
+    <img src="{{ laptop.qr_code.url }}" alt=""/><br>
+    <a href="#" onclick="QRPrint('{{ laptop.qr_code.url }}'); return false;" class="btn btn-outline-success my-2 my-sm-0">PRINT QR CODE</a>
+</div>
+{% endblock %}  
+
+

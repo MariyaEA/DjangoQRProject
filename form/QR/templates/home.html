@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<head>
+       
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css"  href="{% static 'style.css' %}"/>
+
+
+    <div class="card-deck">
+    <div class="card shadow p-3 mb-5 bg-gold rounded">
+    <img src="{% static 'logo/images/p.jpg' %}" width="266px" class="center"/>
+    <div class="card-body">
+        <h5 class="card-title">Laptop owners</h5>
+        <p class="card-text"> Lists of All Laptop owners registerd </p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <a href="{% url 'QR:list_owners' %}" class="btn btn-outline-success my-2 my-sm-0" type="submit">Show</a>
+    </div>
+    </div>
+    <div class="card shadow p-3 mb-5 bg-white rounded">
+        <img src="{% static 'logo/images/s.jpg' %}" width="220px"/>
+    <div class="card-body">
+        <h5 class="card-title">Student </h5>
+        <p class="card-text">List of All Student Laptops Registerd</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <a href="{% url 'QR:list_student_owners' %}" class="btn btn-outline-success my-2 my-sm-0" type="submit">Show</a>
+    </div>
+    </div>
+    <div class="card shadow p-3 mb-5 bg-white rounded">
+        <img src="{% static 'logo/images/t.jpg' %}" width="220px"/>
+        <div class="card-body">
+            <h5 class="card-title">Teachers </h5>
+            <p class="card-text">List of All Teacher Laptops Registerd</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="{% url 'QR:list_teacher_owners' %}" class="btn btn-outline-success my-2 my-sm-0" type="submit">Show</a>
+        </div>
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+            <img src="{% static 'logo/images/staff.png' %}" width="225px"/>
+        <div class="card-body">
+            <h5 class="card-title">Staff </h5>
+            <p class="card-text">List of All Staff Laptops Registerd</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="{% url 'QR:list_staff_owners' %}" class="btn btn-outline-success my-2 my-sm-0" type="submit">Show</a>
+        </div>
+        </div>
+    
+</div>
+{% endblock %}  

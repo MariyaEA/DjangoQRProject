@@ -1,0 +1,47 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+    <a class="navbar-brand" href="#"><img src="{% static 'logo/images/maria_logo.png' %}" width="80px"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+        <a class="nav-link" href="{% url 'QR:home' %}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Register
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{% url 'QR:form' %}">Register Laptop Owner</a>
+
+            
+        </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'QR:about' %}">About</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav">
+        {% if request.user.is_authenticated %}
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                </svg>
+                <span>HI {{ request.user|capfirst }}</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{% url 'QR:user_logout' %}">Logout</a>
+            </div>
+        </li>
+        {% else %}
+        <li class="nav-item">
+            <a href="{% url 'QR:user_login' %}" class="nav-link">Login</a>
+        </li>
+        {% endif %}
+    </ul>
+    </div>
+</nav>
+

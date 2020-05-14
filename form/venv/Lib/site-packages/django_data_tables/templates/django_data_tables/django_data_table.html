@@ -1,0 +1,61 @@
+<div class="{{ table.css_prefix }}__block">
+    <div class="{{ table.css_prefix }}__container" 
+         data-css_prefix="{{ table.css_prefix }}" 
+         data-ident="{{ table.ident }}" 
+         data-urls="{{ table.callback_urls }}"
+         data-django_table="true">
+        <table class="{{ table.css_prefix }}__table">
+            <caption class="{{ table.css_prefix }}__table__caption">
+                <div class="{{ table.css_prefix }}__filters">
+                    {% for filter_name, filter_obj in table.filters.items %}
+                    <span class="{{ table.css_prefix }}__filter" data-name="{{ filter_name }}">
+                        {{ filter_obj.form.as_p }}
+                    </span>
+                    {% endfor %}
+                </div>
+                <div class="{{ table.css_prefix }}__nav">
+                    <button class="{{ table.css_prefix }}__nav__previous">Prev.</button>
+                    <span class="{{ table.css_prefix }}__nav__pages"></span>
+                    <button class="{{ table.css_prefix }}__nav__next">Next</button>
+                    <span class="{{ table.css_prefix }}__counts" 
+                         data-item_name="{{ table.item_name }}" 
+                         data-item_name_plural="{{ table.item_name_plural }}">
+                    </span>
+                    <span class="{{ table.css_prefix }}__limit">
+                        <span class="{{ table.css_prefix }}__limit__selector__wrapper">
+                            <select name="limit" class="{{ table.css_prefix }}__limit__selector">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </span>
+                        <label>per Page</label>
+                    </span>
+                    <button class="{{ table.css_prefix }}__nav__refresh">Refresh</button>
+                </div>
+            <caption>
+            <thead class="{{ table.css_prefix }}__table__head">
+                <tr>
+                    {% for column in table.columns %}
+                    <th {% if column.sortable %}class="{{ table.css_prefix }}__column--sortable{% endif %}" data-title="{{ column.title }}">
+                        {{ column.title }}
+                   </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody class="{{ table.css_prefix }}__table__body">
+            </tbody>
+        </table>
+        <div class="{{ table.css_prefix }}__modal">
+            <div class="{{ table.css_prefix }}__modal__content">
+                <div class="{{ table.css_prefix }}__modal__header">
+                    <span class="{{ table.css_prefix }}__modal__title"></span>
+                    <span class="{{ table.css_prefix }}__modal__close">&times;</span>
+                </div>
+                <div class="{{ table.css_prefix }}__modal__body"></div>
+                <div class="{{ table.css_prefix }}__modal__footer"></div>
+            </div>
+        </div>
+    </div>
+</div>

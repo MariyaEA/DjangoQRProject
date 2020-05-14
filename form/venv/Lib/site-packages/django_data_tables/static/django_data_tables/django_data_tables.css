@@ -1,0 +1,370 @@
+.ddt__block {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.ddt__container {
+    display: inline-block;
+    border: 1px solid lightgrey;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 4px 4px 3px -3px rgba(0, 0, 0, 0.75);
+}
+
+
+.ddt__table__caption {
+    text-align: left;
+    align: left;
+    border-radius: 8px 8px 0 0;
+    background-color: whitesmoke;
+    padding: 0.2em;
+}
+
+.ddt__filters {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.ddt__filters p {
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    display: inline-block;
+}
+
+.ddt__container caption button, 
+.ddt__container caption input {
+    padding: 5px;
+    background-color: whitesmoke;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    line-height: 1.15em;
+}
+
+.ddt__container caption input {
+    background-color: white;
+}
+
+.ddt__container caption input[type='checkbox'] {
+    vertical-align: middle;
+    margin-bottom: 0.15em;
+}
+
+.ddt__container caption button:hover, .ddt__container caption select:hover {
+    background-color: lightgrey;
+}
+
+.ddt__container .ddt__filters select {
+    padding: 5px;
+    padding-right: 1em;
+    line-height: 1.15em;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+}
+
+.ddt__container .ddt__filters select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+.ddt__container .ddt__filters select:after {
+    content: "▼";
+    position: absolute;
+    top: 14%;
+    right: 0 ;
+    bottom: 0;
+    font-size: 60%;
+    padding: 0 1em;
+    background-color: transparent;
+    color: grey;
+    pointer-events:none;
+}
+
+.ddt__container caption button:focus, 
+.ddt__container caption select:focus,
+.ddt__container caption input:focus {
+    outline: none;
+    border-color: lightblue;
+}
+
+.ddt__container caption button:active {
+    color: white;
+    background-color: lightblue;
+}
+
+.ddt__filters input[type="checkbox"]:focus {
+    outline: 1px solid lightblue;
+}
+
+.ddt__table {
+    background-color: white;
+    border-spacing: 0;
+    border-top: 1px solid lightgrey;
+}
+
+.ddt__table__head tr {
+    padding: 0.2em;
+}
+
+.ddt__table__head th {
+    background-color: whitesmoke;
+    color: black;
+    border-bottom: 1px solid lightgrey;
+}
+
+.ddt__table__head th, .ddt__table__body td {
+    padding: 0.5em 1em 0.5em 1em;
+    vertical-align: middle;
+    max-width: 20em;
+}
+
+.ddt__table__body tr {
+    background-color: white;
+    padding: 0.2em;
+    color: #444;
+}
+
+.ddt__table__body tr:hover {
+    color: black;
+    background-color: lightblue;
+}
+
+tr.ddt__row--active_action {
+    color: black;
+    background-color: lightblue;
+}
+
+.ddt__nav {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.ddt__nav__pages {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: inline-block;
+    color: #666;
+}
+
+.ddt__nav__page {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+.ddt__nav__page--active {
+    color: black;
+}
+
+.ddt__limit p {
+    display: inline-block;
+}
+
+.ddt__limit__selector__wrapper {
+    position: relative;
+}
+
+.ddt__limit__selector__wrapper select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    padding: 5px;
+    background-color: whitesmoke;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    line-height: 1.15em;
+    padding-right: 1em;
+}
+
+.ddt__limit__selector:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+.ddt__limit__selector__wrapper:after {
+    content: "▼";
+    position: absolute;
+    top: 14%;
+    right: 0 ;
+    bottom: 0;
+    font-size: 60%;
+    padding: 0 1em;
+    background-color: transparent;
+    color: grey;
+    pointer-events:none;
+}
+
+.ddt__nav__refresh {
+    float: right;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.ddt__column--sortable.asc:after {
+    content: '⥥';
+}
+
+.ddt__column--sortable.desc:after {
+    content: '⥣';
+}
+
+.ddt__column--sortable:after {
+    content: '⥯'; 
+}
+
+.ddt__action {
+    text-align: center;
+}
+
+.ddt__action__button {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #444;
+    display: inline-block;
+}
+
+.ddt__action__button:hover {
+    color: black;
+}
+
+.ddt__action__menu {
+    position: absolute;
+    text-align: left;
+    visibility: hidden;
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px -2px rgba(0, 0, 0, 0.75);
+    position: absolute;
+    margin-left: -5em;
+    top: 0;
+    left: 0;
+}
+
+.ddt__action__menu > *:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+.ddt__action__menu > *:last-child {
+    border-radius: 0 0 8px 8px;
+}
+
+.ddt__action__menu--active {
+    visibility: visible;
+}
+
+.ddt__action__menu__item {
+    cursor: pointer;
+    padding: 0.5em;
+    color: #444;
+}
+
+.ddt__action__menu__item:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.ddt__modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    text-align: left;
+}
+
+.ddt__modal--open {
+    display: block;
+}
+
+.ddt__modal__close {
+    color: #aaa;
+    position: absolute;
+    font-size: 1.7em;
+    font-weight: bold;
+    right: 0.2em;
+    top: 0;
+}
+
+.ddt__modal__content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 680px;
+    box-shadow: 4px 4px 3px -3px rgba(0, 0, 0, 0.75);
+}
+
+.ddt__modal__header {
+    height: 2em;
+    line-height: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    position: relative;
+}
+
+.ddt__modal__title {
+    font-weight: 600;
+}
+
+.ddt__modal__body {
+    min-height: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.ddt__modal__footer {
+    margin-bottom: 0;
+    min-height: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.ddt__modal__footer button {
+    float: right;
+}
+
+.ddt__modal__header--border {
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid lightgrey;
+    background-color: whitesmoke;
+}
+
+
+.ddt__modal__close:hover, .ddt__modal__close:focus {
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.ddt__spinner {
+    line-height: 2em;
+    margin-right: 2em;
+}
+
+.ddt__spinner::after {
+    position: absolute;
+    content: '';
+    border: 0.2em solid;
+    border-radius: 50%;
+    border-color: rgba(0,0,0,0.2) rgba(0,0,0,0.4); 
+    margin-top: 0.3em;
+    font-size: 1em;
+    height: 1.1em;
+    width: 1.1em;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100.0% {transform: rotate(360.0deg);}
+}

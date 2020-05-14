@@ -1,0 +1,11 @@
+<div data-item_pk="{{ item.pk }}" class="{{ table.css_prefix }}__action">
+    <span class="{{ table.css_prefix }}__action__button">☰</span>
+    <div class="{{ table.css_prefix }}__action__menu">
+        {% for action in table.actions %}
+        <div class="{{ table.css_prefix }}__action__menu__item" 
+             data-ident="{{ action.ident }}">
+            {{ action.name }}
+        </div>
+        {% endfor %}
+    </div>
+</div>

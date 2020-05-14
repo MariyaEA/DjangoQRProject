@@ -1,0 +1,131 @@
+<style>
+    @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+    #footer {
+        position: relative;
+        background: #2C3539 !important;
+        height: 400px;
+        margin-top: 60px;
+        margin-bottom: 0px;
+    }
+
+    #footer h5 {
+        padding-top: 20px;
+        padding-left: 10px;
+        border-left: 3px solid #eeeeee;
+        padding-bottom: 6px;
+        margin-bottom: 20px;
+        color: #ffffff;
+    }
+
+    #footer a {
+        color: #ffffff;
+        text-decoration: none !important;
+        background-color: transparent;
+        -webkit-text-decoration-skip: objects;
+    }
+
+    #footer ul.social li {
+        padding: 3px 0;
+    }
+
+    #footer ul.social li a i {
+        margin-right: 5px;
+        font-size: 25px;
+        -webkit-transition: .5s all ease;
+        -moz-transition: .5s all ease;
+        transition: .5s all ease;
+    }
+
+    #footer ul.social li:hover a i {
+        font-size: 30px;
+        margin-top: -10px;
+    }
+
+    #footer ul.social li a,
+    #footer ul.quick-links li a {
+        color: #FFD700;
+    }
+
+    #footer ul.social li a:hover {
+        color: #eeeeee;
+    }
+
+    #footer ul.quick-links li {
+        padding: 3px 0;
+        -webkit-transition: .5s all ease;
+        -moz-transition: .5s all ease;
+        transition: .5s all ease;
+    }
+
+    #footer ul.quick-links li:hover {
+        padding: 3px 0;
+        margin-left: 5px;
+        font-weight: 700;
+    }
+
+    #footer ul.quick-links li a i {
+        margin-right: 5px;
+    }
+
+    #footer ul.quick-links li:hover a i {
+        font-weight: 700;
+    }
+
+    .mb10 {
+        color: #FFD700;
+    }
+</style>
+
+<section id="footer">
+    <div class="container">
+        <div class="row text-center text-xs-center text-sm-left text-md-left">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+                <!--headin5_amrc-->
+                <p class="mb10">You can find us with one of these......</p>
+                <p class="mb10"><i class="fa fa-location-arrow"></i> Debreberhan, Ethiopia </p>
+                <p class="mb10"><i class="fa fa-phone"></i> +251116816286 </p>
+                <p class="mb10"><i class="fa fa fa-envelope"></i> FPR@dbu.edu.et </p>
+
+
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="kilimanjaro_part">
+                    <h5>About Us</h5>
+                    <p class="mb10" align="justify">This Web application is made to the campus for security purpose.
+                        This application will help to reduce the theft of laptop owners in the campus.
+                        It is made with simple and ease of use!!</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a href="{% url 'QR:form' %}"><i class="fa fa-angle-double-right"></i>REGISTER</a></li>
+                    <li><a href="{% url 'QR:about' %}"><i class="fa fa-angle-double-right"></i>ABOUT</a></li>
+                    <li><a href="{% url 'QR:faq' %}"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                <ul class="list-unstyled list-inline social text-center">
+                    <li class="list-inline-item"><a href="https://www.facebook.com/dbu.edu.et"><i
+                                class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="https://twitter.com/login"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/"><i
+                                class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            </hr>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                <p class="text-center">Copyright @2020 | Designed for <a href="http://dbu.edu.et/">Debrebrhan
+                        University</a></p>
+            </div>
+            </hr>
+        </div>
+    </div>
+</section>
